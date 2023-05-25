@@ -1,6 +1,13 @@
 import React from 'react'
 
-const SignUp = () => {
+const SignUp = ({provider}) => {
+    const handleSignIn = () => {
+        firebase.auth().signInWithPopup(provider)
+        .then((result) => {
+            console.log(result)
+        }
+        )
+    }
     return (
         <div className="flex min-h-full">
             <div className="flex flex-1 flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
@@ -42,7 +49,7 @@ const SignUp = () => {
                                     </div>
                                 </div>
 
-                                <div>
+                                <div onClick={handleSignIn}>
                                     <button type="submit" className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</button>
                                 </div>
                             </form>

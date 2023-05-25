@@ -11,8 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
-!src/firebase.config.js
-git rm --cached firebase.config.js
+*.config.js
 
 
 # Editor directories and files
@@ -25,9 +24,4 @@ git rm --cached firebase.config.js
 *.njsproj
 *.sln
 *.sw?
-*.firebase.config.js
-*.src/firebase.config.js
-*.!src/firebase.config.js
-*.!firebase.config.js
-*.git rm --cached firebase.config.js
-*.!git rm --cached firebase.config.js
+

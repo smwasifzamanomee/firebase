@@ -12,6 +12,8 @@ dist
 dist-ssr
 *.local
 !src/firebase.config.js
+git rm --cached firebase.config.js
+firebase.config.js
 
 # Editor directories and files
 .vscode/*
